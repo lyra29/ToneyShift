@@ -1,6 +1,8 @@
 {
-  "name": "tone-converter",
+  "name": "tone-transformer",
   "version": "0.1.0",
+  "description": "Formal and Informal Tone Converter - Built for Google Chrome Built-in AI Challenge 2025",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
