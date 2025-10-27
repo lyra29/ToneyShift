@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAIApis } from '../hooks/useAIApis';
 import ToneDisplay from './ToneDisplay';
 
+
 const ToneConverter = () => {
   const [inputText, setInputText] = useState('');
   const [originalText, setOriginalText] = useState('');
@@ -102,6 +103,7 @@ const ToneConverter = () => {
 
   return (
     <div className="tone-converter">
+        
       <div className="input-section">
         <textarea
           value={inputText}
