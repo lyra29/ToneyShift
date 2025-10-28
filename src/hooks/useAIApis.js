@@ -77,7 +77,7 @@ export const useAIApis = () => {
 
       
       const instruction = targetTone === "informal" 
-  ? "Rewrite this in rude tone"
+  ? "Completely rewrite this like you are texting your best friend"
   : "Make this sound formal like a business email";
       
       
