@@ -8,17 +8,24 @@ export const useAIApis = () => {
     if (!text.trim()) return null;
     
     const formalIndicators = [
-      /sincerely|regards|dear\s+(sir|madam)/i,
-      /would you kindly|please be advised/i,
-      /therefore|however|moreover/i,
-      /\.\s{2,}/, // Multiple spaces after period
+      
+       /\b(sincerely|regards|dear\s+(sir|madam)|respectfully)\b/i,
+    /\b(would you kindly|please be advised|thank you for your attention)\b/i,
+    /\b(therefore|however|moreover|furthermore)\b/i,
+    /\.\s{2,}/,/\b(may I|could you|would you|please)\b/i
+      
+      
     ];
     
     const informalIndicators = [
-      /hey|hi\s+there|what's up/i,
-      /lol|brb|ttyl|omg/i,
-      /gonna|wanna|gotta/i,
-      /!\s{2,}/, // Multiple exclamation marks
+      
+       /\b(hey|hi there|yo|what's up|buddy|dude)\b/i,
+    /\b(lol|brb|ttyl|omg|haha|hahaha)\b/i,
+    /\b(gonna|wanna|gotta|y'all|ain't)\b/i,
+    /!\s*$/, // Exclamation marks
+    /[\u{1F600}-\u{1F64F}]/u // Emoji range
+      
+      
     ];
     
     let formalScore = 0;
@@ -35,9 +42,10 @@ export const useAIApis = () => {
     const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
     const avgSentenceLength = sentences.reduce((acc, s) => acc + s.split(' ').length, 0) / sentences.length;
     
-    if (avgSentenceLength > 15) formalScore++;
-    if (avgSentenceLength < 10) informalScore++;
-    
+    if (avgSentenceLength > 12) formalScore++;
+    if (avgSentenceLength < 8) informalScore++;
+    const contractions = text.match(/\b(can't|won't|I'm|you're|they're|it's|didn't|doesn't|isn't|aren't|don't|wouldn't|couldn't)\b/gi);
+  if (contractions && contractions.length > 0) informalScore += contractions.length;
     return formalScore >= informalScore ? 'formal' : 'informal';
   }, []);
 
