@@ -16,20 +16,21 @@ const ToneConverter = () => {
 
   useEffect(() => {
     const checkAIAvailability = async () => {
-      if (!window.ai) {
-        setError('Built-in AI APIs are not available in this browser. Please use Chrome with AI features enabled.');
-        return;
+      try{
+         await new Promise(resolve => setTimeout(resolve, 500));
+         if (typeof Rewriter === "undefined") {
+         setError('Rewriter API is not available. Please use Chrome Canary (with built-in AI features enabled).');
+         }else {
+        setError(''); 
       }
+    } catch (err) {
+      setError('Error accessing AI APIs: ' + err.message);
+    }
+  };
+
       
-      try {
-        // Check if required APIs are available
-        if (!window.ai.rewriter) {
-          setError('Rewriter API is not available. Please ensure you are in the Chrome Built-in AI Early Preview Program.');
-        }
-      } catch (err) {
-        setError('Error accessing AI APIs: ' + err.message);
-      }
-    };
+      
+      
 
     checkAIAvailability();
   }, []);
