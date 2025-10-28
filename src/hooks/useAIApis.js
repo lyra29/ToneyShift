@@ -75,10 +75,12 @@ export const useAIApis = () => {
 
       console.log("Rewriter is ready");
 
-      const instruction =
-        targetTone === "formal"
-          ? "Rewrite the text in a formal, professional tone."
-          : "Rewrite the text in a casual, conversational tone.";
+      
+      const instruction = targetTone === "informal" 
+  ? "Make this much shorter and use word that can be understood by a primary student"
+  : "Make this sound formal like a business email";
+      
+      
 
       const result = await rewriter.rewrite(text, {
         instruction,
