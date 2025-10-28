@@ -77,7 +77,7 @@ export const useAIApis = () => {
 
       
       const instruction = targetTone === "informal" 
-  ? "Make this much shorter and use word that can be understood by a primary student"
+  ? "Rewrite this in rude tone"
   : "Make this sound formal like a business email";
       
       
