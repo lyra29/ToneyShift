@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #bba0ca 0%, #764ba2 100%);
   min-height: 100vh;
   color: #333;
 }
@@ -58,7 +58,7 @@ textarea {
 
 textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #87255b;
 }
 
 .tone-info {
@@ -75,7 +75,7 @@ textarea:focus {
 
 .tone-indicator.formal {
   background: #e3f2fd;
-  color: #1976d2;
+  color: #b370b0;
 }
 
 .tone-indicator.informal {
@@ -103,12 +103,12 @@ textarea:focus {
 }
 
 .btn-primary {
-  background: #1976d2;
+  background: #b370b0;
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #1565c0;
+  background: #87255b;
   transform: translateY(-2px);
 }
 
@@ -157,7 +157,7 @@ textarea:focus {
 }
 
 .tone-display.formal {
-  border-color: #1976d2;
+  border-color: #bba0ca;
   background: #e3f2fd;
 }
 
@@ -181,7 +181,7 @@ textarea:focus {
 }
 
 .tone-badge.formal {
-  background: #1976d2;
+  background: #bba0ca;
   color: white;
 }
 
@@ -225,12 +225,12 @@ textarea:focus {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 10px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #b166ea;
 }
 
 .history-tone {
   font-weight: bold;
-  color: #667eea;
+  color: #b370b0;
   margin-bottom: 8px;
   font-size: 0.9rem;
 }

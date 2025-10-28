@@ -7,7 +7,7 @@ const ToneDisplay = ({ text, tone, onCopy }) => {
     <div className={`tone-display ${tone}`}>
       <div className="tone-header">
         <span className={`tone-badge ${tone}`}>
-          {tone === 'formal' ? '📝 Formal' : '😊 Informal'}
+          {tone === 'formal' ? 'Formal' : ' Informal'}
         </span>
         <button 
           onClick={() => onCopy(text)}

@@ -13,7 +13,7 @@ function App() {
         <ToneConverter />
       </main>
       <footer>
-        <p>Built for Google Chrome Built-in AI Challenge 2025</p>
+        <p>2025</p>
       </footer>
     </div>
   );
