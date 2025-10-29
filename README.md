@@ -89,6 +89,6 @@ To test ToneyShift, follow these steps:
 6. **Try Different Examples**  
    - Test both formal and informal inputs to see the conversion behavior.  
    - Examples to try:  
-     - Formal: “Please submit your report by Friday for review.”  
+     - Formal: “Would it be possible to meet for a casual get-together tonight?”  
      - Informal: “Hey! Wanna hang out later?”  
 
