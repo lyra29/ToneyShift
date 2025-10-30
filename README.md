@@ -40,8 +40,8 @@ ToneyShift is a web application that converts text between **formal** and **info
 - Deployment nuances on **Netlify** and handling client-side AI in production.
 
 ## What's next for ToneyShift
-- Improve the **informal conversion** to make it more natural for casual and friendly contexts.  
-- Add **additional languages** for multilingual tone conversion.  
+- Improve the **informal conversion** to make it more natural for casual and friendly contexts.    
+-Improve the **formal conversion** to make it more natural and formal.    
 - Implement **tone intensity controls**, letting users choose “slightly formal” or “very informal.”  
 -Improve the tone detection regular expression for more accurate and better detection to convert.
 
